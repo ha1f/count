@@ -9,7 +9,7 @@
 import C4
 import LTMorphingLabel
 
-class Digital2CounterNumberView: CounterNumberView, LTMorphingLabelDelegate {
+class Digital2CounterNumberView: CounterNumberView/*, LTMorphingLabelDelegate*/ {
     
     var label: LTMorphingLabel!
     

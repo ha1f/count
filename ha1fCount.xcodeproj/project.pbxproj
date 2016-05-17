@@ -19,6 +19,8 @@
 		5581499C1CE60F3E00E52822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5581499A1CE60F3E00E52822 /* LaunchScreen.storyboard */; };
 		558149A71CE60F3E00E52822 /* ha1fCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558149A61CE60F3E00E52822 /* ha1fCountTests.swift */; };
 		558149B21CE60F3E00E52822 /* ha1fCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558149B11CE60F3E00E52822 /* ha1fCountUITests.swift */; };
+		558DDD131CEB43C100C67FC5 /* MoonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DDD121CEB43C100C67FC5 /* MoonView.swift */; };
+		558DDD151CEB5DD800C67FC5 /* MoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558DDD141CEB5DD800C67FC5 /* MoonViewController.swift */; };
 		55C17C881CE9BB7A00DAAD8B /* SelectSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C17C871CE9BB7A00DAAD8B /* SelectSampleViewController.swift */; };
 		55C17C8A1CE9BB7F00DAAD8B /* SelectSampleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C17C891CE9BB7F00DAAD8B /* SelectSampleTableViewCell.swift */; };
 		55C17C8D1CE9BE1300DAAD8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C17C8C1CE9BE1300DAAD8B /* Main.storyboard */; };
@@ -76,6 +78,8 @@
 		558149AD1CE60F3E00E52822 /* ha1fCountUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ha1fCountUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		558149B11CE60F3E00E52822 /* ha1fCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ha1fCountUITests.swift; sourceTree = "<group>"; };
 		558149B31CE60F3E00E52822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		558DDD121CEB43C100C67FC5 /* MoonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoonView.swift; sourceTree = "<group>"; };
+		558DDD141CEB5DD800C67FC5 /* MoonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoonViewController.swift; sourceTree = "<group>"; };
 		55C17C871CE9BB7A00DAAD8B /* SelectSampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSampleViewController.swift; sourceTree = "<group>"; };
 		55C17C891CE9BB7F00DAAD8B /* SelectSampleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSampleTableViewCell.swift; sourceTree = "<group>"; };
 		55C17C8B1CE9BE1300DAAD8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				55C17C991CEA1D3300DAAD8B /* Templates */,
 				558149931CE60F3E00E52822 /* DigitalNumberViewController.swift */,
 				55C17C8E1CE9C37200DAAD8B /* Digital2ViewController.swift */,
+				558DDD141CEB5DD800C67FC5 /* MoonViewController.swift */,
 				55C17C9A1CEA1D6600DAAD8B /* ColorfulCounterViewController.swift */,
 			);
 			path = ViewController;
@@ -157,6 +162,7 @@
 				55FCC3F21CE8D2B000DB6520 /* Digital2CounterNumberView.swift */,
 				55C17C931CEA0B4F00DAAD8B /* ClosureButton.swift */,
 				55C17C951CEA109A00DAAD8B /* SpringButton.swift */,
+				558DDD121CEB43C100C67FC5 /* MoonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -443,12 +449,14 @@
 				558149941CE60F3E00E52822 /* DigitalNumberViewController.swift in Sources */,
 				55FCC3E61CE86F6500DB6520 /* SkypeLoaderView.swift in Sources */,
 				5530281D1CE612EF00D42B01 /* ModelManager.swift in Sources */,
+				558DDD151CEB5DD800C67FC5 /* MoonViewController.swift in Sources */,
 				55C17C981CEA19FA00DAAD8B /* LikeCounterViewController.swift in Sources */,
 				55FCC3F31CE8D2B000DB6520 /* Digital2CounterNumberView.swift in Sources */,
 				55C17C8A1CE9BB7F00DAAD8B /* SelectSampleTableViewCell.swift in Sources */,
 				55FCC3EA1CE8AA3800DB6520 /* Settings.swift in Sources */,
 				55C17C881CE9BB7A00DAAD8B /* SelectSampleViewController.swift in Sources */,
 				558149921CE60F3E00E52822 /* AppDelegate.swift in Sources */,
+				558DDD131CEB43C100C67FC5 /* MoonView.swift in Sources */,
 				55C17C9F1CEA252400DAAD8B /* ArrayTableViewDataSource.swift in Sources */,
 				55C17C941CEA0B4F00DAAD8B /* ClosureButton.swift in Sources */,
 				553028291CE6350100D42B01 /* Util.swift in Sources */,

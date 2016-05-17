@@ -17,6 +17,7 @@ class Settings {
     static let samples: [SampleViewObject] = [
         ("colorful", {ColorfulCounterViewController()}),
         ("digital1", {DigitalNumberViewController()}),
-        ("digital2", {Digital2ViewController()})
+        ("digital2", {Digital2ViewController()}),
+        ("moon", {MoonViewController()}),
     ]
 }
