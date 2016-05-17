@@ -13,6 +13,17 @@ class Digital2CounterNumberView: CounterNumberView, LTMorphingLabelDelegate {
     
     var label: LTMorphingLabel!
     
+    var currentNumber = 0
+    
+    var textColor: UIColor {
+        set {
+            self.label.textColor = newValue
+        }
+        get {
+            return self.label.textColor
+        }
+    }
+    
     override init(frame: Rect) {
         super.init(frame: frame)
         label = LTMorphingLabel(frame: CGRect(self.bounds))
@@ -25,7 +36,26 @@ class Digital2CounterNumberView: CounterNumberView, LTMorphingLabelDelegate {
     
     override func updateView(newNumber: Int) {
         label.text = "\(newNumber)"
-        self.label.morphingEffect = LTMorphingEffect.init(rawValue: Util.getRandomInteger(0, max: 4))!
+        if newNumber == 0 && currentNumber != 1 && currentNumber != -1 {
+            self.label.morphingDuration = 0.6
+            self.label.morphingEffect = .Fall
+        } else {
+            if newNumber > currentNumber {
+                // 増加
+                self.label.morphingDuration = 0.6
+                self.label.morphingEffect = .Evaporate
+            } else {
+                // 減少
+                if newNumber == 0 {
+                    self.label.morphingDuration = 1.5
+                    self.label.morphingEffect = .Burn
+                } else {
+                    self.label.morphingDuration = 0.6
+                    self.label.morphingEffect = .Anvil
+                }
+            }
+        }
+        currentNumber = newNumber
     }
     
 }

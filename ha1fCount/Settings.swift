@@ -6,8 +6,17 @@
 //  Copyright © 2016年 ha1f. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
 
 class Settings {
     static let USE_TIMER = false
+    
+    typealias SampleViewObject = (title: String, initializer: () -> UIViewController)
+    
+    static let samples: [SampleViewObject] = [
+        ("colorful", {ColorfulCounterViewController()}),
+        ("digital1", {DigitalNumberViewController()}),
+        ("digital2", {Digital2ViewController()})
+    ]
 }

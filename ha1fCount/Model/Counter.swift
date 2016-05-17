@@ -19,13 +19,25 @@ class Counter: NSObject {
         }
     }
     
+    func forceReload() {
+        delegate?.onCounterNumberChanged(old: number, new: number)
+    }
+    
     var delegate: CounterDelegate? = nil
     
     func add(n: Int) {
         number += n
     }
     
-    func count() {
+    func sub(n: Int) {
+        number -= n
+    }
+    
+    func decrement() {
+        number -= 1
+    }
+    
+    func increment() {
         number += 1
     }
     

@@ -1,0 +1,4 @@
+github "C4Framework/C4iOS" ~> 1.0.1
+github "lexrus/LTMorphingLabel"
+github "shu223/Pulsator" "master"
+
