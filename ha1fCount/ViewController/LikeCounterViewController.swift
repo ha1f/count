@@ -6,28 +6,15 @@
 //  Copyright © 2016年 ha1f. All rights reserved.
 //
 
-import C4
 import UIKit
 import Pulsator
 
-class LikeCounterViewController: CanvasController {
-    
-    let counter = ModelManager.manager.counter
-    
-    var counterButton: ClosureButton!
+class LikeCounterViewController: LikeCounterViewControllerWithoutPulsator {
 
     var pulsator: Pulsator!
     
     override func loadView() {
         super.loadView()
-        
-        counterButton = SpringButton(frame: CGRectMake(0, 0, 94, 91)).dispatchOnTouchUpInside {[weak self] _ in
-            self?.counter.increment()
-        }
-        counterButton.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height - 150)
-        let likeImage = UIImage(named: "like.png")
-        counterButton.setImage(likeImage, forState: .Normal)
-        self.view.add(counterButton)
         
         pulsator = Pulsator()
         pulsator.numPulse = 3
@@ -39,12 +26,12 @@ class LikeCounterViewController: CanvasController {
         view.layer.addSublayer(pulsator)
         
         self.view.bringToFront(counterButton)
+        
+        self.view.backgroundColor = Constants.BACK_COLOR
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = Constants.BACK_COLOR
         
         srand(UInt32(time(nil)))
         
@@ -55,11 +42,9 @@ class LikeCounterViewController: CanvasController {
         counter.delegate = self
         counter.forceReload()
     }
-    
-}
-
-extension LikeCounterViewController: CounterDelegate {
-    func onCounterNumberChanged(old old: Int, new: Int) {
+ 
+    override func onCounterNumberChanged(old old: Int, new: Int) {
+        super.onCounterNumberChanged(old: old, new: new)
         if new > 0 {
             pulsator.stop()
         } else {

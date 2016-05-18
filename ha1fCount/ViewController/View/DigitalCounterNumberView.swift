@@ -11,6 +11,8 @@ import C4
 class DigitalCounterNumberView: CounterNumberView {
     
     var textShape: TextShape!
+    var suffix: String?
+    var prefix: String?
     
     override init(frame: Rect) {
         super.init(frame: frame)
@@ -19,7 +21,7 @@ class DigitalCounterNumberView: CounterNumberView {
     }
 
     override func updateView(newNumber: Int) {
-        textShape.text = "\(newNumber)"
+        textShape.text = "\(prefix ?? "")\(newNumber)\(suffix ?? "")"
         textShape.center = self.bounds.center
     }
 

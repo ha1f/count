@@ -8,7 +8,6 @@
 
 import C4
 import UIKit
-import Pulsator
 
 class Digital2ViewController: OriginalCounterViewController {
     

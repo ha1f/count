@@ -24,6 +24,18 @@ class Digital2CounterNumberView: CounterNumberView/*, LTMorphingLabelDelegate*/ 
         }
     }
     
+    var prefix: String?
+    var suffix: String?
+    
+    var textFont: UIFont {
+        set {
+            label.font = newValue
+        }
+        get {
+            return label.font
+        }
+    }
+    
     override init(frame: Rect) {
         super.init(frame: frame)
         label = LTMorphingLabel(frame: CGRect(self.bounds))
@@ -35,7 +47,7 @@ class Digital2CounterNumberView: CounterNumberView/*, LTMorphingLabelDelegate*/ 
     }
     
     override func updateView(newNumber: Int) {
-        label.text = "\(newNumber)"
+        label.text = "\(prefix ?? "")\(newNumber)\(suffix ?? "")"
         if newNumber == 0 && currentNumber != 1 && currentNumber != -1 {
             self.label.morphingDuration = 0.6
             self.label.morphingEffect = .Fall

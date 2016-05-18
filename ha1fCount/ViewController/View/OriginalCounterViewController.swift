@@ -29,12 +29,15 @@ class OriginalCounterViewController: LikeCounterViewController {
         decreaseButton.setImage(dislikeImage, forState: .Normal)
         self.view.add(decreaseButton)
         
-        clearButton = SpringButton(frame: CGRectMake(0, 0, 94/2, 91/2)).dispatchOnTouchUpInside {[weak self] _ in
+        clearButton = SpringButton(frame: CGRectMake(0, 0, 50, 50)).dispatchOnTouchUpInside {[weak self] _ in
             self?.counter.reset()
         }
+        clearButton.layer.cornerRadius = 50/2
+        clearButton.backgroundColor = UIColor.redColor()
         clearButton.center = CGPoint(x: 70, y: self.view.frame.height - 130)
-        clearButton.setTitle("reset", forState: .Normal)
-        clearButton.setTitleColor(Constants.KEY_COLOR, forState: .Normal)
+        clearButton.setTitle("RESET", forState: .Normal)
+        clearButton.titleLabel?.font = UIFont.systemFontOfSize(15)
+        clearButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.view.add(clearButton)
         
         timerButton = SpringButton(frame: CGRectMake(0, 0, 70, 30)).dispatchOnTouchUpInside {[weak self] _ in

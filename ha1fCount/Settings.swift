@@ -15,10 +15,12 @@ class Settings {
     typealias SampleViewObject = (title: String, initializer: () -> UIViewController)
     
     static let samples: [SampleViewObject] = [
-        ("colorful", {ColorfulCounterViewController()}),
         ("digital1", {DigitalNumberViewController()}),
         ("digital2", {Digital2ViewController()}),
+        ("skype", {SkypeLoaderViewController()}),
+        ("colorful", {ColorfulCounterViewController()}),
         ("movie", {MovieViewController()}),
         ("moon", {MoonViewController()}),
+        ("shake", {ShakeViewController()}),
     ]
 }
