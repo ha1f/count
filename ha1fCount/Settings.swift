@@ -15,6 +15,7 @@ class Settings {
     typealias SampleViewObject = (title: String, initializer: () -> UIViewController)
     
     static let samples: [SampleViewObject] = [
+        ("very simple", {Storyboard<VerySimpleViewController>(name: "VerySimple", identifier: "VerySimpleVC").instantiate()}),
         ("digital1", {DigitalNumberViewController()}),
         ("digital2", {Digital2ViewController()}),
         ("skype", {SkypeLoaderViewController()}),

@@ -14,7 +14,7 @@ class ShakeViewController: CounterViewController {
     var counterNumberView: CounterNumberView!
     
     let motionManager = CMMotionManager()
-    var preData = CMAcceleration(x: 0, y: 0, z: 0)
+    var preData: CMAcceleration!
     
     var shakeMargin = 0
     
@@ -39,6 +39,10 @@ class ShakeViewController: CounterViewController {
     }
     
     func updateAccelerationData(data: CMAcceleration) {
+        guard let preData = preData else {
+            self.preData = data
+            return
+        }
         
         let diff = pow(data.x-preData.x, 2) + pow(data.y-preData.y, 2) + pow(data.z-preData.z, 2)
         
@@ -46,13 +50,13 @@ class ShakeViewController: CounterViewController {
         
         if isShaken && shakeMargin <= 0 {
             counter.increment()
-            shakeMargin = 3
+            shakeMargin = 4
         }
         if shakeMargin > 0 {
             shakeMargin -= 1
         }
         
-        preData = data
+        self.preData = data
     }
     
     override func onCounterNumberChanged(old old: Int, new: Int) {
