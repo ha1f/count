@@ -55,22 +55,23 @@ class ColorfulCounterViewController: LikeCounterViewController {
     
     private func animateCircleWithCompletion(completion: (() -> ())?) {
         let scale = Double(self.view.frame.height + self.view.frame.width) / 15.0
-        UIView.animateWithDuration(
-            0.8,
-            animations: {[weak self] _ in
-                guard let `self` = self else {
-                    return
-                }
-                self.circle?.transform = Transform.makeScale(scale, scale)
-                if let v = self.counterNumberView as? Digital2CounterNumberView {
-                    v.textColor = Util.reversedColor(UIColor(self.circle!.fillColor!)!)
-                }
-            },
-            completion: {[weak self] _ in
-                self?.view.backgroundColor = UIColor(self!.circle!.fillColor!)
-                self?.createNewCircle()
-                completion?()
-            })
+        
+        let v = ViewAnimation(duration: 0.8) {[weak self] _ in
+            guard let `self` = self else {
+                return
+            }
+            self.circle?.transform = Transform.makeScale(scale, scale)
+            if let v = self.counterNumberView as? Digital2CounterNumberView {
+                v.textColor = Util.reversedColor(UIColor(self.circle!.fillColor!)!)
+            }
+            self.circle?.fillColor = self.canvas.backgroundColor
+        }
+        v.addCompletionObserver{[weak self] _ in
+            //self?.view.backgroundColor = UIColor(self!.circle!.fillColor!)
+            self?.createNewCircle()
+            completion?()
+        }
+        v.animate()
     }
     
 }
