@@ -16,10 +16,10 @@ class Settings {
     
     static let samples: [SampleViewObject] = [
         ("very simple", {Storyboard<VerySimpleViewController>(name: "VerySimple", identifier: "VerySimpleVC").instantiate()}),
+        ("colorful", {ColorfulCounterViewController()}),
         ("digital1", {DigitalNumberViewController()}),
         ("digital2", {Digital2ViewController()}),
         ("skype", {SkypeLoaderViewController()}),
-        ("colorful", {ColorfulCounterViewController()}),
         ("movie", {MovieViewController()}),
         ("moon", {MoonViewController()}),
         ("shake", {ShakeViewController()}),
