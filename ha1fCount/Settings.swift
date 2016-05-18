@@ -18,6 +18,7 @@ class Settings {
         ("colorful", {ColorfulCounterViewController()}),
         ("digital1", {DigitalNumberViewController()}),
         ("digital2", {Digital2ViewController()}),
+        ("movie", {MovieViewController()}),
         ("moon", {MoonViewController()}),
     ]
 }

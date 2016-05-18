@@ -63,6 +63,7 @@ class MoonView: CounterNumberView {
         let center = Point(self.bounds.width/2, self.bounds.height/2)
         
         // なんとか倍率とかで計算できないか？(アニメーション)
+        // cos(theta) = 0の時の処理(落ちる)
         
         let color: Color
         var theta = 2 * M_PI * Double(newNumber%30) / 30
@@ -99,8 +100,13 @@ class MoonView: CounterNumberView {
         newMoon.fillColor = color
         newMoon.strokeColor = color
         
-        self.view.addSubview(newMoon.view)
-        self.darkMoon?.view.removeFromSuperview()
-        self.darkMoon = newMoon
+        /*ViewAnimation(duration: 0.5) {[weak self] _ in
+            guard let `self` = self else {
+                return
+            }*/
+            self.view.addSubview(newMoon.view)
+            self.darkMoon?.view.removeFromSuperview()
+            self.darkMoon = newMoon
+        //}.animate()
     }
 }

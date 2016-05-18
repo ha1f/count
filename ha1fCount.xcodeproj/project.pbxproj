@@ -40,6 +40,8 @@
 		55FCC3F11CE8CA6D00DB6520 /* Pulsator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55FCC3EF1CE8CA6D00DB6520 /* Pulsator.framework */; };
 		55FCC3F31CE8D2B000DB6520 /* Digital2CounterNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FCC3F21CE8D2B000DB6520 /* Digital2CounterNumberView.swift */; };
 		55FCC3F51CE972A700DB6520 /* dislike.png in Resources */ = {isa = PBXBuildFile; fileRef = 55FCC3F41CE972A700DB6520 /* dislike.png */; };
+		84E1BB0E1CEC323000C362AB /* MovieCounterNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1BB0D1CEC323000C362AB /* MovieCounterNumberView.swift */; };
+		84E1BB101CEC325000C362AB /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E1BB0F1CEC325000C362AB /* MovieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		55FCC3EF1CE8CA6D00DB6520 /* Pulsator.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pulsator.framework; path = Carthage/Build/iOS/Pulsator.framework; sourceTree = "<group>"; };
 		55FCC3F21CE8D2B000DB6520 /* Digital2CounterNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digital2CounterNumberView.swift; sourceTree = "<group>"; };
 		55FCC3F41CE972A700DB6520 /* dislike.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dislike.png; sourceTree = "<group>"; };
+		84E1BB0D1CEC323000C362AB /* MovieCounterNumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCounterNumberView.swift; sourceTree = "<group>"; };
+		84E1BB0F1CEC325000C362AB /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 				558149931CE60F3E00E52822 /* DigitalNumberViewController.swift */,
 				55C17C8E1CE9C37200DAAD8B /* Digital2ViewController.swift */,
 				558DDD141CEB5DD800C67FC5 /* MoonViewController.swift */,
+				84E1BB0F1CEC325000C362AB /* MovieViewController.swift */,
 				55C17C9A1CEA1D6600DAAD8B /* ColorfulCounterViewController.swift */,
 			);
 			path = ViewController;
@@ -163,6 +168,7 @@
 				55C17C931CEA0B4F00DAAD8B /* ClosureButton.swift */,
 				55C17C951CEA109A00DAAD8B /* SpringButton.swift */,
 				558DDD121CEB43C100C67FC5 /* MoonView.swift */,
+				84E1BB0D1CEC323000C362AB /* MovieCounterNumberView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				558149911CE60F3E00E52822 /* AppDelegate.swift */,
+				55FCC3E91CE8AA3800DB6520 /* Settings.swift */,
 				55C17C921CE9ED1A00DAAD8B /* Common */,
 				55FCC3EB1CE8C53500DB6520 /* Resources */,
 				553028161CE6111100D42B01 /* Model */,
@@ -228,7 +235,6 @@
 			children = (
 				5530281C1CE612EF00D42B01 /* ModelManager.swift */,
 				55FCC3E71CE8A9C900DB6520 /* Constants.swift */,
-				55FCC3E91CE8AA3800DB6520 /* Settings.swift */,
 				55FCC3E11CE86ED700DB6520 /* ResourceUtil.swift */,
 				553028281CE6350100D42B01 /* Util.swift */,
 			);
@@ -445,6 +451,7 @@
 				553028251CE6180100D42B01 /* DigitalCounterNumberView.swift in Sources */,
 				55C17C911CE9CFBC00DAAD8B /* OriginalCounterViewController.swift in Sources */,
 				55FCC3E81CE8A9C900DB6520 /* Constants.swift in Sources */,
+				84E1BB0E1CEC323000C362AB /* MovieCounterNumberView.swift in Sources */,
 				55C17C9B1CEA1D6600DAAD8B /* ColorfulCounterViewController.swift in Sources */,
 				558149941CE60F3E00E52822 /* DigitalNumberViewController.swift in Sources */,
 				55FCC3E61CE86F6500DB6520 /* SkypeLoaderView.swift in Sources */,
@@ -457,6 +464,7 @@
 				55C17C881CE9BB7A00DAAD8B /* SelectSampleViewController.swift in Sources */,
 				558149921CE60F3E00E52822 /* AppDelegate.swift in Sources */,
 				558DDD131CEB43C100C67FC5 /* MoonView.swift in Sources */,
+				84E1BB101CEC325000C362AB /* MovieViewController.swift in Sources */,
 				55C17C9F1CEA252400DAAD8B /* ArrayTableViewDataSource.swift in Sources */,
 				55C17C941CEA0B4F00DAAD8B /* ClosureButton.swift in Sources */,
 				553028291CE6350100D42B01 /* Util.swift in Sources */,

@@ -1,15 +1,15 @@
 //
-//  MoonViewController.swift
+//  MovieViewController.swift
 //  ha1fCount
 //
-//  Created by 山口智生 on 2016/05/17.
+//  Created by はるふ on 2016/05/18.
 //  Copyright © 2016年 ha1f. All rights reserved.
 //
 
 import C4
 import UIKit
 
-class MoonViewController: OriginalCounterViewController {
+class MovieViewController: OriginalCounterViewController {
     
     var counterNumberView: CounterNumberView!
     
@@ -17,7 +17,7 @@ class MoonViewController: OriginalCounterViewController {
         super.loadView()
         let width = Double(self.view.frame.width)
         
-        counterNumberView = MoonView(frame: Rect(0, 50, width, width))
+        counterNumberView = MovieCounterNumberView(frame: Rect(0, 50, width, width))
         self.view.add(counterNumberView)
     }
     
