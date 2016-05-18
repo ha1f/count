@@ -9,7 +9,7 @@
 import C4
 import UIKit
 
-class MoonViewController: OriginalCounterViewController {
+class MoonViewController: LikeCounterViewControllerWithoutPulsator {
     
     var counterNumberView: CounterNumberView!
     
@@ -23,6 +23,9 @@ class MoonViewController: OriginalCounterViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.canvas.backgroundColor = MoonView.COLOR_MOON_DARK
+        
+        counterButton.setImage(UIImage(named: "tsukimi_dango"), forState: .Normal)
     }
     
     override func onCounterNumberChanged(old old: Int, new: Int) {
