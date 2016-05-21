@@ -11,8 +11,15 @@ import C4
 class DigitalCounterNumberView: CounterNumberView {
     
     var textShape: TextShape!
-    var suffix: String?
-    var prefix: String?
+    
+    var textColor: Color! {
+        set {
+            self.textShape.fillColor = newValue
+        }
+        get {
+            return self.textShape.fillColor
+        }
+    }
     
     override init(frame: Rect) {
         super.init(frame: frame)

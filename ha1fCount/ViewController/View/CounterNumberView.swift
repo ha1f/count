@@ -10,6 +10,9 @@ import C4
 
 class CounterNumberView: View {
     
+    var suffix: String?
+    var prefix: String?
+    
     func updateView(newNumber: Int) {
         fatalError("You must implement updateView()!")
     }

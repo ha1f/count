@@ -90,7 +90,8 @@ class MoonView: CounterNumberView {
         let x = radius / 2 * (1.0 / cos(theta) + cos(theta))
         let a = asin(radius / x)
         
-        let newMoon = Arc(center: Point((center.x + radius * cos(theta) - x), center.y), radius: x, start: -a, end: a)
+        let newMoon = Arc(center: Point((center.x + radius * cos(theta) - x), center.y),
+                          radius: x, start: -a, end: a)
         /*if cos(theta) > 0 {
             newMoon.anchorPoint = Point(-(x-radius*cos(theta))/(radius*cos(theta)), 0.5)
         } else {

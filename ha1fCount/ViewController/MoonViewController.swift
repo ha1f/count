@@ -26,6 +26,7 @@ class MoonViewController: LikeCounterViewControllerWithoutPulsator {
         self.canvas.backgroundColor = MoonView.COLOR_MOON_DARK
         
         counterButton.setImage(UIImage(named: "tsukimi_dango"), forState: .Normal)
+        counterButton.imageView?.contentMode = .ScaleAspectFit
     }
     
     override func onCounterNumberChanged(old old: Int, new: Int) {

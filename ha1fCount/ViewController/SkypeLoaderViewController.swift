@@ -34,6 +34,7 @@ class SkypeLoaderViewController: LikeCounterViewControllerWithoutPulsator {
         super.viewDidLoad()
         
         self.canvas.backgroundColor = SkypeLoaderView.COLOR_SKYPE
+        counterButton.setImage(UIImage(named: "call.png"), forState: .Normal)
     }
     
     override func onCounterNumberChanged(old old: Int, new: Int) {

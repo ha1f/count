@@ -7,14 +7,20 @@
 //
 
 import C4
+import UIKit
 import CoreMotion
+import AVFoundation
 
 class ShakeViewController: CounterViewController {
     
     var counterNumberView: CounterNumberView!
     
+    var backView: UIImageView!
+    
     let motionManager = CMMotionManager()
     var preData: CMAcceleration!
+    
+    var player: AVPlayer!
     
     var shakeMargin = 0
     
@@ -29,11 +35,23 @@ class ShakeViewController: CounterViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        player = AVPlayer(playerItem: AVPlayerItem(asset: AVAsset(URL: NSBundle.mainBundle().URLForResource("Taylor Swift-Shake It Off", withExtension: "mp3")!)))
+        player.play()
+        
         self.motionManager.accelerometerUpdateInterval = 0.2
-        self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue()) {
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.motionManager.stopAccelerometerUpdates()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue()) {[weak self]
             (data, error) in
             dispatch_async(dispatch_get_main_queue()) {
-                self.updateAccelerationData(data!.acceleration)
+                self?.updateAccelerationData(data!.acceleration)
             }
         }
     }

@@ -20,12 +20,17 @@ class VerySimpleViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        counter.forceReload()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         counter.delegate = self
         
         self.view.backgroundColor = Constants.BACK_COLOR
-        
     }
     
     @IBAction func plus(sender: AnyObject) {

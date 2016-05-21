@@ -24,9 +24,6 @@ class Digital2CounterNumberView: CounterNumberView/*, LTMorphingLabelDelegate*/ 
         }
     }
     
-    var prefix: String?
-    var suffix: String?
-    
     var textFont: UIFont {
         set {
             label.font = newValue
